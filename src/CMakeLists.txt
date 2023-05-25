@@ -15,7 +15,7 @@ add_executable(
     TileViewer.h
     CanterFunctions.cpp
     CanterFunctions.h
-)
+ "Room.cpp" "Level.cpp" "Tile.cpp" "Room.h" "Tile.h" "Level.h")
 
 target_include_directories(Remains-Editor PRIVATE 
     ${PROJECT_SOURCE_DIR}/lib/imgui

@@ -142,11 +142,6 @@ void RenderGrid(const SDL_Event& event)
 
 
 	//Draw a box. Move right 40 pixels. Repeat i times (Number of columns). Reset x. Move down 40 pixels. Repeat j times (Number of rows).
-
-
-
-
-
 	//Vertical Rows
 	for (int j = 0; j < GridHeight; j++)
 	{
@@ -168,10 +163,6 @@ void RenderGrid(const SDL_Event& event)
 			SDL_RenderDrawLine(renderer,x2 + TileWidth + EndPanX,y2 + EndPanY,x2 + TileWidth + EndPanX,y2 + TileHeight + EndPanY);
 
 
-
-
-
-
 			//Yellow lines | mirror-flipped. 2
 			SDL_SetRenderDrawColor(renderer, 255, 255, 128,255);
 			SDL_RenderDrawLine(renderer,x4 + EndPanX,y4 + EndPanY,x4 + TileWidth + EndPanX,y4 + EndPanY);
@@ -179,8 +170,6 @@ void RenderGrid(const SDL_Event& event)
 
 			SDL_RenderDrawLine(renderer,x4 + EndPanX,y4 + EndPanY,x4 + EndPanX,y4 + TileHeight + EndPanY);
 			SDL_RenderDrawLine(renderer,x4 + TileWidth + EndPanX,y4 + EndPanY,x4 + TileWidth + EndPanX,y4 + TileHeight + EndPanY);
-
-
 
 
 			//Red lines | flipped. 3
@@ -192,18 +181,13 @@ void RenderGrid(const SDL_Event& event)
 			SDL_RenderDrawLine(renderer,x3 + TileWidth + EndPanX,y3 + EndPanY,x3 + TileWidth + EndPanX,y3 + TileHeight + EndPanY);
 
 
-
-
 			//Blue lines | Normal 4
 			SDL_SetRenderDrawColor(renderer, 128, 128, 255, 255);
-			//Draw a Horizontal line from 0,0 to TileWidth,0
 			SDL_RenderDrawLine(renderer,x + EndPanX,y + EndPanY,x + TileWidth + EndPanX,y + EndPanY);
-			//Draw a Vertical line from 0,Tile-height to TileWidth,TileHeight
 			SDL_RenderDrawLine(renderer,x + EndPanX, y + TileHeight + EndPanY,x + TileWidth + EndPanX,y + TileHeight + EndPanY);
 
 			SDL_RenderDrawLine(renderer,x + EndPanX,y + EndPanY,x + EndPanX,y + TileHeight + EndPanY);
 			SDL_RenderDrawLine(renderer,x + TileWidth + EndPanX,y + EndPanY,x + TileWidth + EndPanX,y + TileHeight + EndPanY);
-
 
 
 			//move to the right to prepare to make the next square.
