@@ -5,18 +5,15 @@
 
 #define SDL_MAIN_HANDLED
 
-#include "lib/imgui/imgui.h"
-#include "lib/imgui/imgui_impl_sdl2.h"
+#include "imgui.h"
+#include "imgui_impl_sdl2.h"
 
-#include "lib/glad/glad.h"
-#include "lib/glad/khrplatform.h"
+#include "glad.h"
+#include "khrplatform.h"
 
 #include "SDL.h"
 #include "SDL_opengl.h"
 #include "SDL_syswm.h"
-
-
-
 
 #include <stdlib.h>
 #include <stdio.h>

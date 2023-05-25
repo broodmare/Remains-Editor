@@ -1,1 +1,1 @@
-# CanterCoreSDL
+# This is an in-development level editor for Fallout Equestria: Remains.
