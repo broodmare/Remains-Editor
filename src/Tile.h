@@ -13,4 +13,13 @@ class tile
 	public:
 		tile(std::string name, int id); 
 
+
+	//Define functions to get info.
+	const std::string& getName() const;
+	int getId() const;
+
+	//Define functions to set info.
+	void setName(const std::string& name);
+	void setId(int id);
+
 };

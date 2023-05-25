@@ -216,13 +216,14 @@ void RenderGrid(const SDL_Event& event)
 	y4 = -TileHeight;
 
 	//Check world space for starting grids
-	if(event.type == SDL_KEYDOWN)
+
+	if (event.key.keysym.sym == SDLK_g)
 	{
-		std::cout << "#################\n";
-		std::cout << "Normal grid start point ("<< x <<", "<< y <<").\n";
-		std::cout << "Flipped grid start point ("<< x4 <<", "<< y4 <<").\n";
-		std::cout << "Mirrored grid start point ("<< x3 <<", "<< y3 <<").\n";
-		std::cout << "Mirror-Flipped grid start point ("<< x2 <<", "<< y2 <<").\n";
+	std::cout << "#################\n";
+	std::cout << "Normal grid start point ("<< x <<", "<< y <<").\n";
+	std::cout << "Flipped grid start point ("<< x4 <<", "<< y4 <<").\n";
+	std::cout << "Mirrored grid start point ("<< x3 <<", "<< y3 <<").\n";
+	std::cout << "Mirror-Flipped grid start point ("<< x2 <<", "<< y2 <<").\n";
 	}
 
 

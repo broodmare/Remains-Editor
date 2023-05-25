@@ -1,6 +1,4 @@
 ﻿// CanterCore.cpp : Defines the entry point for the application.
-//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-//<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 #include "main.h"
 
@@ -56,9 +54,11 @@ int main()
 		SDL_Event event;
         while (SDL_PollEvent(&event)) 
         {
+
 			GridPan(event);
 			GridZoom(event);
         	RenderGrid(event);
+			GetData(event);
 			if (event.type == SDL_QUIT)
 			{
 				running = false;
