@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("CanterCore")
+project ("Remains-Editor")
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)

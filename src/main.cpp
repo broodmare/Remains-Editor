@@ -2,7 +2,7 @@
 //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 //<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-#include "CanterCore.h"
+#include "main.h"
 
 
 using namespace std;
@@ -36,7 +36,7 @@ int main()
 
 
 	//Creates the window and SDL renderer..
-	 window = SDL_CreateWindow("CanterCore", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, SDL_WINDOW_SHOWN);
+	 window = SDL_CreateWindow("Remains Editor", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, SDL_WINDOW_SHOWN);
 	 renderer =  SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	 //Initialize a screen that can be modified.
