@@ -13,9 +13,15 @@ add_executable(
     "${PROJECT_SOURCE_DIR}/lib/glad/glad.c"
     TileViewer.cpp
     TileViewer.h
-    CanterFunctions.cpp
-    CanterFunctions.h
- "Room.cpp" "Level.cpp" "Tile.cpp" "Room.h" "Tile.h" "Level.h")
+    "Room.cpp" 
+    "Level.cpp" 
+    "Tile.cpp" 
+    "Room.h" 
+    "Tile.h"
+    "Level.h" 
+    "Parser.cpp" 
+    "Parser.h"  
+)
 
 target_include_directories(Remains-Editor PRIVATE 
     ${PROJECT_SOURCE_DIR}/lib/imgui
@@ -23,7 +29,6 @@ target_include_directories(Remains-Editor PRIVATE
     ${PROJECT_SOURCE_DIR}/lib/glad
     )
 target_link_libraries(Remains-Editor SDL2::SDL2 SDL2::SDL2main)
-
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Remains-Editor PROPERTY CXX_STANDARD 20)

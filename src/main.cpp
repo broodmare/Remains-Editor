@@ -34,19 +34,18 @@ int main()
 
 
 	//Creates the window and SDL renderer..
-	 window = SDL_CreateWindow("Remains Editor", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, SDL_WINDOW_SHOWN);
-	 renderer =  SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	const auto windowflags = static_cast<SDL_WindowFlags>(SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Remains Editor", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, windowflags);
+	renderer =  SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	 //Initialize a screen that can be modified.
-	 screen = SDL_GetWindowSurface(window);
-
-
-
-	 ////////////////////////////////////////////////////////////
+	//Initialize a screen that can be modified.
+	screen = SDL_GetWindowSurface(window);
 
 
 
-	 //What to do while the game is running.
+	////////////////////////////////////////////////////////////
+
+	//What to do while the game is running.
 	bool running = true;
 	while (running)
 	{
@@ -59,6 +58,7 @@ int main()
 			GridZoom(event);
         	RenderGrid(event);
 			GetData(event);
+
 			if (event.type == SDL_QUIT)
 			{
 				running = false;
